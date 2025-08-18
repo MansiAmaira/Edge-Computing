@@ -2,18 +2,6 @@
 
 EdgeCloudSim provides a simulation environment specific to Edge Computing scenarios where it is possible to conduct experiments that considers both computational and networking resources. EdgeCloudSim is based on CloudSim but adds considerable functionality so that it can be efficiently used for Edge Computing scenarios. EdgeCloudSim is an open source tool and any contributions are welcome. If you want to contribute EdgeCloudSim, please check below feature list and the [contributing guidelines](/CONTRIBUTING.md). If you want to use EdgeCloudSim in your research work, please cite our paper [[3]](https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3493).
 
-## Discussion Forum
-
-The discussion forum for EdgeCloudSim can be found [here](https://groups.google.com/forum/#!forum/edgecloudsim).
-We hope to meet with all interested parties in this forum.
-Please feel free to join and let us discuss issues, share ideas related to EdgeCloudSim all together.
-
-## YouTube Channel
-
-The YouTube channel of EdgeCloudSim can be found [here](https://www.youtube.com/channel/UC2gnXTWHHN6h4bk1D5gpcIA).
-You can find some videos presenting our works and tutorials on this channel.
-Click [here](https://youtu.be/SmQgRANWUts) to watch the video with brief information about EdgeCloudSim.
-
 ## Needed Features
 
 * Task migration among the Edge or Cloud VMs
@@ -73,43 +61,6 @@ EdgeCloudSim uses a factory pattern making easier to integrate new models mentio
   </p>
 </p>
 
-## Ease of Use
-At the beginning of our study, we observed that too many parameters are used in the simulations and managing these parameters programmatically is difficult.
-As a solution, we propose to use configuration files to manage the parameters.
-EdgeCloudSim reads parameters dynamically from the following files:
-- **config.properties:** Simulation settings are managed in configuration file
-- **applications.xml:** Application properties are stored in xml file
-- **edge_devices.xml:** Edge devices (datacenters, hosts, VMs etc.) are defined in xml file
-
-<p align="center">
-  <img src="/doc/images/ease_of_use.png" width="60%">
-</p>
-
-## Compilation and Running
-To compile sample application, *compile.sh* script which is located in *scripts/sample_application* folder can be used. You can rewrite similar script for your own application by modifying the arguments of javac command in way to declare the java file which includes your main method. Please note that this script can run on Linux based systems, including Mac OS. You can also use your favorite IDE (eclipse, netbeans etc.) to compile your project.
-
-In order to run multiple sample_application scenarios in parallel, you can use *run_scenarios.sh* script which is located in *scripts/sample_application* folder. To run your own application, modify the java command in *runner.sh* script in a way to declare the java class which includes your main method. The details of using this script is explained in [this](/wiki/How-to-run-EdgeCloudSim-application-in-parallel) wiki page.
-
-You can also monitor each process via the output files located under *scripts/sample_application/output/date* folder. For example:
-```
-./run_scenarios.sh 8 10
-tail -f output/date/ite_1.log
-```
-
-## Analyzing the Results
-At the end of each iteration, simulation results will be compressed in the *output/date/ite_n.tgz* files. When you extract these tgz files, you will see lots of log file in csv format. You can find matlab files which can plot graphics by using these files under *scripts/sample_application/matlab* folder. You can also write other scripts (e.g. python scripts) with the same manner of matlab plotter files.
-
-## Example Output of EdgeCloudSim
-You can plot lots of graphics by using the result of EdgeCloudSim. Some examples are given below:
-
-![Alt text](/doc/images/result1.png?raw=true) ![Alt text](/doc/images/result2.png?raw=true)
-
-![Alt text](/doc/images/result4.png?raw=true) ![Alt text](/doc/images/result5.png?raw=true)
-
-![Alt text](/doc/images/result6.png?raw=true) ![Alt text](/doc/images/result3.png?raw=true)
-
-![Alt text](/doc/images/result7.png?raw=true) ![Alt text](/doc/images/result8.png?raw=true)
-
 ## Publications
 **[1]** C. Sonmez, A. Ozgovde and C. Ersoy, "[EdgeCloudSim: An environment for performance evaluation of Edge Computing systems](http://ieeexplore.ieee.org/document/7946405/)," *2017 Second International Conference on Fog and Mobile Edge Computing (FMEC)*, Valencia, 2017, pp. 39-44.
 
@@ -120,3 +71,4 @@ You can plot lots of graphics by using the result of EdgeCloudSim. Some examples
 **[4]** C. Sonmez, A. Ozgovde and C. Ersoy, "[Fuzzy Workload Orchestration for Edge Computing](https://ieeexplore.ieee.org/abstract/document/8651335/)," in *IEEE Transactions on Network and Service Management*, vol. 16, no. 2, pp. 769-782, June 2019.
 
 **[5]** C. Sonmez, A. Ozgovde and C. Ersoy, "[Machine Learning-Based Workload Orchestrator for Vehicular Edge Computing](https://ieeexplore.ieee.org/abstract/document/9208723/)," in *IEEE Transactions on Intelligent Transportation Systems*, doi: 10.1109/TITS.2020.3024233.
+
